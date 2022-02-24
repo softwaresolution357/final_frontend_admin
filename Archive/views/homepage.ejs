@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Untitled Document</title>
+    <style type="text/css">
+      body {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table
+      width="960"
+      border="0"
+      align="center"
+      cellpadding="0"
+      cellspacing="0"
+      style="border: 1px solid #ccc;"
+    >
+      <tr>
+        <td height="10" colspan="3" align="center" bgcolor="#D6D6D6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="54" colspan="3" align="center" bgcolor="#D6D6D6">
+          <img src="images/right.png" width="41" height="41" />
+        </td>
+      </tr>
+      <tr>
+        <td width="117" height="53" align="center" bgcolor="#D6D6D6">&nbsp;</td>
+        <td
+          width="526"
+          align="center"
+          bgcolor="#D6D6D6"
+          style="
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+            color: #fff;
+            font-weight: 300;
+          "
+        >
+          <strong>Thank You</strong>
+        </td>
+        <td width="137" align="center" bgcolor="#D6D6D6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="76" align="center" bgcolor="#D6D6D6">&nbsp;</td>
+        <td
+          align="center"
+          bgcolor="#D6D6D6"
+          style="
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 300;
+          "
+        >
+          Your Payment of <%=transection.totaldebitamount%> has been received successfully through (paytm). You will be updated through
+          email and SMS once the product is dispatched. TRX id :<%=transection.trxid%>, Payment Method:<%=transection.paymentgatway%><br />
+          <span
+            style="
+              font-family: 'Poppins', sans-serif;
+              font-size: 15px;
+              color: red;
+              font-weight: 300;
+            "
+            >Ref. ID:</span
+          >
+          <%= transection.refid%>, Payment:
+          <span
+            style="
+              font-family: 'Poppins', sans-serif;
+              font-size: 15px;
+              color: green;
+              font-weight: 300;
+            "
+            ><strong><%=transection.paymentgatway%></strong></span
+          >
+        </td>
+        <td align="center" bgcolor="#D6D6D6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="1" colspan="3" align="center" bgcolor="#FFFFFF"></td>
+      </tr>
+      <tr>
+        <td height="10" colspan="3" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" colspan="3" align="center" bgcolor="#FFFFFF">
+          <table
+            width="99%"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              position: relative;
+              color: #000;
+              font-weight: 400;
+              line-height: 1.2em;
+              margin-bottom: -3px;
+              font-size: 18px;
+              text-transform: capitalize;
+              font-family: Poppins, sans-serif;
+            "
+          >
+            <tr>
+              <td
+                width="27%"
+                height="28"
+                align="center"
+                bgcolor="#CC0000"
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 15px;
+                  color: #fff;
+                  font-weight: 300;
+                "
+              >
+                Customer Information
+              </td>
+              <td
+                width="23%"
+                align="center"
+                bgcolor="#CC0000"
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 15px;
+                  color: #fff;
+                  font-weight: 300;
+                "
+              >
+                Billing Address
+              </td>
+              <td
+                width="24%"
+                align="center"
+                bgcolor="#CC0000"
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 15px;
+                  color: #fff;
+                  font-weight: 300;
+                "
+              >
+                Shipping Address
+              </td>
+              <td
+                width="1%"
+                align="center"
+                bgcolor="#FFFFFF"
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 15px;
+                  color: #fff;
+                  font-weight: 300;
+                "
+              >
+                &nbsp;
+              </td>
+              <td
+                width="25%"
+                rowspan="8"
+                align="center"
+                bgcolor="#f2f2f2"
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 15px;
+                  color: #999;
+                  font-weight: 300;
+                  border: 1px solid #ccc;
+                "
+              >
+                <p>
+                  <br />
+                  <strong
+                    >Expected Date of<br />
+                    Delivery<br />
+                    5</strong
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21"><%=customer.name%></td>
+              <td><%=customer.billing%></td>
+              <td><%=customer.shipping%></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><%=customer.email%></td>
+              <td><%=customer.city%></td>
+              <td><%=customer.city%></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><%=customer.mobile %></td>
+              <td><%=customer.state%></td>
+              <td><%=customer.state%></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21">&nbsp;</td>
+              <td><%=customer.country%>,<%=customer.pincode%></td>
+              <td><%=customer.country%>,<%=customer.pincode%></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="21">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="10" colspan="3" align="center" bgcolor="#FFFFFF"></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <table
+      width="960"
+      border="0"
+      align="center"
+      cellpadding="0"
+      cellspacing="0"
+    >
+      <tr>
+        <td
+          width="780"
+          height="53"
+          colspan="3"
+          align="center"
+          bgcolor="#CC0000"
+          style="
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+            color: #fff;
+            font-weight: 300;
+          "
+        >
+          <strong>Your Order Details</strong>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="3" align="left" bgcolor="#CCCCCC">
+          <table
+            width="960"
+            border="0"
+            align="center"
+            cellpadding="1"
+            cellspacing="1"
+            style="
+              font-family: 'Poppins', sans-serif;
+              font-size: 13px;
+              color: #999;
+              font-weight: 300;
+            "
+          >
+            <tr>
+              <td width="49" height="32" align="center" bgcolor="#f2f2f2">
+                SL No
+              </td>
+              <td width="136" align="center" bgcolor="#f2f2f2">Image</td>
+              <td width="135" align="center" bgcolor="#f2f2f2">Name</td>
+              <td width="93" align="center" bgcolor="#f2f2f2">Unit Price</td>
+              <td width="65" align="center" bgcolor="#f2f2f2">Qty</td>
+              <td width="105" align="center" bgcolor="#f2f2f2">Del. Amount</td>
+              <td width="97" align="center" bgcolor="#f2f2f2">Tax Rate (%)</td>
+              <td width="72" align="center" bgcolor="#f2f2f2">Tax Type</td>
+              <td width="89" align="center" bgcolor="#f2f2f2">Tax Amount</td>
+              <td width="88" align="center" bgcolor="#f2f2f2">Net Amount</td>
+            </tr>
+            <% i = 0 %>
+            <% invoice.forEach(function(invoices){ %>
+            
+              <td height="70" align="center" bgcolor="#FFFFFF">
+                <%= ++i %>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <a href="http://localhost:3000/product/<%=invoices.productid.slug%>" target="_blank">
+                  <img
+                    src='<%=productImage%><%= invoices.productid.photo[0]%>'
+                    width="50"
+                    height="20"
+                  />
+                </a>
+              </td>
+              <td align="center">
+                <%=invoices.productid.name%>
+                </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.unitprice%>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.quantity%>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.deliver%>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.tax%>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                IGST
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.taxamout%>
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                <%=invoices.totalamount%>
+              </td>
+            </tr> 
+            <% }); %>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                &nbsp;
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                total
+              </td>
+              <td align="center" bgcolor="#FFFFFF">
+                 <%=transection.totaldebitamount%>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <a href="http://localhost:3000/">
+    <button>
+      Home Page
+    </button>
+  </a>
+    <p>&nbsp;</p>
+    <blockquote>&nbsp;</blockquote>
+  </body>
+</html>
